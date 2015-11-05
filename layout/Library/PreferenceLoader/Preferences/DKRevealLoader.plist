@@ -1,0 +1,27 @@
+entry = {
+	bundle = AppList;
+	cell = PSLinkCell;
+	icon = "/Library/PreferenceLoader/Preferences/DKRevealLoader.png";
+	isController = 1;
+	label = DKRevealLoader;
+	ALSettingsPath = "/var/mobile/Library/Preferences/org.kostyshyn.DKRevealLoader.plist";
+	ALSettingsKeyPrefix = "DKRevealLoader-";
+	ALChangeNotification = "org.kostyshyn.DKRevealLoader.settingschanged";
+	ALSettingsDefaultValue = 0;
+	ALSectionDescriptors = (
+		{
+			title = "User Applications";
+			predicate = "(isSystemApplication = FALSE)";
+			"cell-class-name" = "ALSwitchCell";
+			"icon-size" = 29;
+			"suppress-hidden-apps" = 1;
+		},
+		{
+			title = "System Applications";
+			predicate = "(isSystemApplication = TRUE)";
+			"cell-class-name" = "ALSwitchCell";
+			"icon-size" = 29;
+			"suppress-hidden-apps" = 1; 
+		}
+	);
+};
